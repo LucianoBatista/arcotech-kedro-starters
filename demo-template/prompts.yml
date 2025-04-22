@@ -7,3 +7,11 @@ project_name:
   error_message: |
     It must contain only alphanumeric symbols, spaces, underscores and hyphens and
     be at least 2 characters long.
+
+project_desc:
+  title: "Project Description"
+  text: |
+    Please enter a human readable description for your new project.
+  error_message: |
+    It must contain only alphanumeric symbols, spaces, underscores and hyphens and
+    be at least 2 characters long.
