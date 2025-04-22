@@ -3,44 +3,37 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-requires-python = ">=3.9"
 name = "{{ cookiecutter.python_package }}"
+description = "{{ cookiecutter.project_desc }}"
 readme = "README.md"
 dynamic = ["version"]
+requires-python = ">=3.12"
 dependencies = [
-    "ipython>=8.10",
-    "jupyterlab>=3.0",
-    "notebook",
+    "arize>=7.36.0",
+    "arize-otel>=0.8.0",
+    "dvc-s3>=3.2.0",
+    "mkdocs-glightbox>=0.4.0",
+    "mkdocs-material>=9.6.11",
+    "pandas~=2.2.3",
+    "polars~=1.27",
+    "seaborn~=0.13.2",
+    "ipython~=9.1.0",
+    "jupyterlab~=4.4.0",
+    "notebook~=7.4.0",
     "kedro[jupyter]~={{ cookiecutter.kedro_version }}",
-    "kedro-datasets[pandas-csvdataset, pandas-exceldataset, pandas-parquetdataset, plotly-plotlydataset, plotly-jsondataset, matplotlib-matplotlibwriter]>=3.0",
+    "kedro-datasets[pandas, matplotlib, polars] ~= 6.0.0",
     "kedro-viz>=6.7.0",
-    "scikit-learn~=1.5.1",
-    "seaborn~=0.12.1"
+    "ipykernel~=6.29.5",
+    "pre-commit~=4.2.0",
+    "pytest-cov~=3.0",
+    "pytest-mock~=3.14",
+    "pytest~=8.3.5",
 ]
 
 [project.scripts]
 "{{ cookiecutter.repo_name }}" = "{{ cookiecutter.python_package }}.__main__:main"
 
 [project.entry-points."kedro.hooks"]
-
-[project.optional-dependencies]
-docs = [
-    "docutils<0.21",
-    "sphinx>=5.3,<7.3",
-    "sphinx_rtd_theme==2.0.0",
-    "nbsphinx==0.8.1",
-    "sphinx-autodoc-typehints==1.20.2",
-    "sphinx_copybutton==0.5.2",
-    "ipykernel>=5.3, <7.0",
-    "Jinja2<3.2.0",
-    "myst-parser>=1.0,<2.1"
-]
-dev = [
-    "pytest-cov~=3.0",
-    "pytest-mock>=1.7.1, <2.0",
-    "pytest~=7.2",
-    "ruff~=0.1.8"
-]
 
 [tool.setuptools.dynamic]
 version = {attr = "{{ cookiecutter.python_package }}.__version__"}
