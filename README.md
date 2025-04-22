@@ -1,2 +1,5 @@
-# arcotech-kedro-starters
-Different Starters for different necessities
+# Kedro Templates
+
+Templates utilizados na ArcoTech para diferentes tipos de projetos.
+
+Atualmente temos apenas o projeto `demo-template`
