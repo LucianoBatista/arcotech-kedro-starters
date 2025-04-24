@@ -12,3 +12,5 @@ Esse projeto utiliza o `kedro` como framework de experimentação. Antes rodar o
 6. Puxe os dados do versionamento (`dvc pull`)
 7. Visualize todo o pipeline (`kedro viz`)
 8. Rode todo o pipeline (`kedro run`)
+
+...
