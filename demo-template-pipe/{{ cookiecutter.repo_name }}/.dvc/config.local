@@ -1,8 +1,0 @@
-[core]
-    analytics = false
-    remote = {{ cookiecutter.repo_name }}
-['remote "{{ cookiecutter.repo_name }}"']
-    url = s3://arcotech-dev/{{ cookiecutter.repo_name }}/
-    region = us-east-1
-    use_ssl = false
-    ssl_verify = false
